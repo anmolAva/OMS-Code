@@ -1,0 +1,38 @@
+<div class="sc-platform-screen-default creditrequestdashboard">
+    <!-- Licensed Materials - Property of IBM IBM Call Center for Commerce -->
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel: true, 'class': 'screenTitleContainer', uId: 'titleMessagePanel'">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel: true, 'class': 'screenTitlePanel', uId: 'pnlTitleBar', 'aria-live': 'assertive',
+        scParamDataFn: function() {
+            return {
+                'aria-label': this.getSimpleBundleString('arialabel_creditRequestDashboard')
+            };
+        }" role="region">
+            <div data-dojo-type="sc/plat/dojo/layout/AdvancedTableLayout" data-dojo-props="showLabels: false, cols: 2, customClass: 'screenTitleTableContainer'">
+                <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="imageSrc: '/isccs/resources/css/icons/images/creditrequest.png', 'class': 'screenTitleImage', appendToContextRoot: true, uId: 'lb_titleImage'">
+                </div>
+                <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel: true, uId: 'pnlTitleContainer'">
+                    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="spanLabel: true, 'class': 'screenTitle', uId: 'lb_screenTitle', scParamData: { value: 'Credit Limit Requests' }">
+                    </div>
+                    <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="spanLabel: true, 'class': 'screenSubTitle', uId: 'lb_screenSubTitle', scParamData: { value: 'Manage and approve pending credit requests' }">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel: true, 'class': 'editorContent', uId: 'editorContent'" role="main">
+        <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel: true, uId: 'scScreenHolder'">
+            <div data-dojo-type="dojox/grid/DataGrid"
+                 data-dojo-props="store: creditRequestStore, structure: creditRequestGridLayout, autoHeight: true, selectable: true, uId: 'creditRequestGrid'">
+            </div>
+        </div>
+    </div>
+
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="spanLabel: true, 'class': 'footer', resourceId: 'ISCFO0TER001', uId: 'scFooterHolder'" role="region">
+        <div data-dojo-type="sc/plat/dojo/widgets/Link" data-dojo-props="uId: 'siteMapLink',
+        scParamDataFn: function() {
+            return { value: this.getSimpleBundleString('Action_SiteMap') };
+        }">
+        </div>
+    </div>
+</div>

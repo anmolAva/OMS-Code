@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed Materials - Property of IBM
+
+(C)Copyright IBM Corp. [2010, 2011] All Rights Reserved.
+
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. -->
+<DBSchema>
+  <Entities>
+    <Entity ApiNeeded="Y" AuditRequired="N" KeyType="Random" HasHistory="True" Prefix="EXTN" TableName="EXTN_CREDIT_LIMIT_REQUEST" XMLName="ExtnCreditLimitRequest">
+      <Attributes>
+        <Attribute ColumnName="REQUEST_ID" Type="VARCHAR2" Size="32" DataType="Key" DefaultValue="" Nullable="false" XMLName="RequestId" Description="Primary key for table"/>
+        <Attribute ColumnName="CUSTOMER_ID" Type="VARCHAR2" Size="32" Nullable="false" QueryAllowed="true" XMLName="CustomerId" Description="Field holds customer identifier"/>
+        <Attribute ColumnName="CUSTOMER_TYPE" Type="VARCHAR2" Size="20" Nullable="true" QueryAllowed="true" XMLName="CustomerType" Description="Field holds customer type"/>
+        <Attribute ColumnName="REQUESTED_CREDIT_LIMIT" Type="NUMBER" Size="12" Nullable="false" QueryAllowed="true" XMLName="RequestedCreditLimit" Description="Field holds requested credit limit"/>
+        <Attribute ColumnName="CURRENT_CREDIT_LIMIT" Type="NUMBER" Size="12" Nullable="false" QueryAllowed="true" XMLName="CurrentCreditLimit" Description="Field holds current credit limit"/>
+        <Attribute ColumnName="CREDIT_SCORE" Type="NUMBER" Size="10" Nullable="true" QueryAllowed="true" XMLName="CreditScore" Description="Field holds credit score"/>
+        <Attribute ColumnName="CREDIT_STATUS" Type="VARCHAR2" Size="20" Nullable="true" QueryAllowed="true" XMLName="CreditStatus" Description="Field holds credit status"/>
+        <Attribute ColumnName="REASON_FOR_REQUEST" Type="VARCHAR2" Size="100" Nullable="true" QueryAllowed="true" XMLName="ReasonForRequest" Description="Field holds reason for credit limit request"/>
+        <Attribute ColumnName="CREATE_USER_ID" Type="VARCHAR2" Size="32" Nullable="true" QueryAllowed="true" XMLName="CreateUserId" Description="Field holds user ID who created the record"/>
+        <Attribute ColumnName="CREATE_TS" Type="DATE" DataType="TimeStamp" DefaultValue="sysdate" XMLName="CreateTS" Description="Field holds timestamp of record creation"/>
+        <Attribute ColumnName="MODIFY_USER_ID" Type="VARCHAR2" Size="32" Nullable="true" QueryAllowed="true" XMLName="ModifyUserId" Description="Field holds user ID who last modified the record"/>
+        <Attribute ColumnName="MODIFY_TS" Type="DATE" DataType="TimeStamp" DefaultValue="sysdate" XMLName="ModifyTS" Description="Field holds timestamp of last modification"/>
+      </Attributes>
+      <PrimaryKey Name="CREDIT_REQ_PK">
+        <Attribute ColumnName="REQUEST_ID"/>
+      </PrimaryKey>
+    </Entity>
+  </Entities>
+</DBSchema>
